@@ -1,0 +1,9 @@
+name: New Relic Task
+type: module
+description: A module for handling migration from dummy API and provide a custom route.
+package: Migration
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_drupal_ui
+  - drupal:migrate_tools

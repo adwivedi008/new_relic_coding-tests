@@ -1,0 +1,48 @@
+uuid: 61dcbd33-7be9-455c-ab14-4452f65f1c9b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OAXGIBbWfhrpaHmc94Q1L5uaAzw3gxEIjgSBsqiZLBE
+id: nr_migrate_company
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: nr_migrate
+label: 'Migrate Company'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - 'https://jsonplaceholder.typicode.com/users'
+  ids:
+    id:
+      type: integer
+      alias: id
+  fields:
+    -
+      name: id
+      label: ID
+      selector: id
+    -
+      name: name
+      label: 'Company Name'
+      selector: company/name
+    -
+      name: catchphrase
+      label: CatchPharse
+      selector: company/catchPhrase
+    -
+      name: bs
+      label: Bs
+      selector: company/bs
+process:
+  title: name
+  field_username: catchphrase
+  field_bs: bs
+destination:
+  plugin: 'entity:node'
+  default_bundle: company
+migration_dependencies: {  }

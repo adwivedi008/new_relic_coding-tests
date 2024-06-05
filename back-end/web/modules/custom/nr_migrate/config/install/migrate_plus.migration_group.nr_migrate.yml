@@ -1,0 +1,8 @@
+id: nr_migrate
+
+# A human-friendly label for the group.
+label: New Relic Migration
+
+# More information about the group.
+description: A simple migration-related imports, to imports Users and Company Content types.
+source_type: Json Endpoint

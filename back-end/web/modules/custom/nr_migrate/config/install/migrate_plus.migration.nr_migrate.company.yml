@@ -1,0 +1,39 @@
+id: nr_migrate_company
+label: 'Migrate Company'
+migration_group: nr_migrate
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - "https://jsonplaceholder.typicode.com/users"
+  ids:
+    id:
+      type: integer
+      alias: id
+  fields:
+    -
+      name: id
+      label: 'ID'
+      selector: id
+    -
+      name: name
+      label: 'Company Name'
+      selector: company/name
+    -
+      name: catchphrase
+      label: 'CatchPharse'
+      selector: company/catchPhrase
+    -
+      name: bs
+      label: 'Bs'
+      selector: company/bs
+
+process:
+  title: name
+  field_username: catchphrase
+  field_bs: bs
+destination:
+  plugin: 'entity:node'
+  default_bundle: company
+migration_dependencies: {}

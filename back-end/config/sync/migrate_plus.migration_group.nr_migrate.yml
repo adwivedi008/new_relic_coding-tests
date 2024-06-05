@@ -1,0 +1,12 @@
+uuid: b973d4ba-e8fd-424c-8801-d794b97bdfb2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6zkjAsi-1oMDEAsYIwy3JnP06QwA_IfiTQ3mWf4UJXQ
+id: nr_migrate
+label: 'New Relic Migration'
+description: 'A simple migration-related imports, to imports Users and Company Content types.'
+source_type: 'Json Endpoint'
+module: null
+shared_configuration: null

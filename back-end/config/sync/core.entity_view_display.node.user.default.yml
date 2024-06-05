@@ -1,0 +1,167 @@
+uuid: bf7d8adf-3aaa-4a91-8732-eab7ca8d8ebb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.user.field_bs
+    - field.field.node.user.field_city
+    - field.field.node.user.field_company
+    - field.field.node.user.field_email
+    - field.field.node.user.field_id
+    - field.field.node.user.field_latitude
+    - field.field.node.user.field_longitude
+    - field.field.node.user.field_phone
+    - field.field.node.user.field_suite
+    - field.field.node.user.field_username
+    - field.field.node.user.field_website
+    - field.field.node.user.field_zipcode
+    - node.type.user
+  module:
+    - field_group
+    - link
+    - telephone
+    - user
+third_party_settings:
+  field_group:
+    group_address:
+      children:
+        - field_bs
+        - field_suite
+        - field_city
+        - field_zipcode
+        - group_geo
+      label: Address
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+    group_geo:
+      children:
+        - field_latitude
+        - field_longitude
+      label: Geo
+      parent_name: group_address
+      region: content
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+id: node.user.default
+targetEntityType: node
+bundle: user
+mode: default
+content:
+  field_bs:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_city:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_company:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_id:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_latitude:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_longitude:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_phone:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_suite:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_username:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_website:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_zipcode:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

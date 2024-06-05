@@ -1,0 +1,7 @@
+nr_migrate.all_users:
+  path: '/admin/users/users-details'
+  defaults:
+    _controller: '\Drupal\nr_migrate\Controller\UserCompanyController::content'
+    _title: 'User Details'
+  requirements:
+    _permission: 'access content'

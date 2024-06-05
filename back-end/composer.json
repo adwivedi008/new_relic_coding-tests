@@ -16,10 +16,14 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "drupal/admin_toolbar": "^3.4",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
+        "drupal/devel_php": "^1.6",
+        "drupal/field_group": "^3.4",
         "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_tools": "^6.0",
         "drush/drush": "^12.5"
     },
     "conflict": {
